@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/alegra-restaurant/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/alegra-restaurant/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/alegra-restaurant",
+  "projects": {
+    "alegra-restaurant": {
+      "type": "application",
+      "root": "apps/alegra-restaurant",
+      "entryFile": "main",
+      "sourceRoot": "apps/alegra-restaurant/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/alegra-restaurant/tsconfig.app.json"
+      }
+    },
+    "kitchen": {
+      "type": "application",
+      "root": "apps/kitchen",
+      "entryFile": "main",
+      "sourceRoot": "apps/kitchen/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/kitchen/tsconfig.app.json"
+      }
+    }
+  }
+}
